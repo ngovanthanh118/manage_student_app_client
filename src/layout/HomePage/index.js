@@ -16,8 +16,9 @@ export default function HomePage() {
     useEffect(() => {
         const timeOut = setTimeout(loadStudents, 500);
         return () => {
-            clearTimeout(timeOut);
+            clearTimeout(timeOut)
         }
+      
     }, [])
     const handleDeleteStudent = (id) => {
         const isDelete = window.confirm('Do you want to delete this student?');
@@ -53,7 +54,7 @@ export default function HomePage() {
                             {students && students.map((student, index) => (
                                 <tr key={index}>
                                     <td>{index + 1}</td>
-                                    <td><img src={`http://localhost:4000/api/uploads/${student.image}`} width='80px' height='80px' alt="" /></td>
+                                    <td><img src={`https://manage-student-app-server-3cb3e158c512.herokuapp.com/api/uploads/${student.image}`} width='80px' height='80px' alt="" /></td>
                                     <td>{student.name}</td>
                                     <td>{formattedDate(student.birthday)}</td>
                                     <td>{student.email}</td>

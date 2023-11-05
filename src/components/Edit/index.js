@@ -129,7 +129,7 @@ export default function EditStudent() {
                                 />
                             </div>
                         </div>
-                        <img src={`http://localhost:4000/api/uploads/${image}`} width='80px' height='80px' alt="" />
+                        <img src={`https://manage-student-app-server-3cb3e158c512.herokuapp.com/api/uploads/${image}`} width='80px' height='80px' alt="" />
                         <div className="mb-3 row mt-2">
                             <div className="col-sm-12">
                                 <button type="submit" className="btn btn-primary mb-3 w-100">Update student</button>
